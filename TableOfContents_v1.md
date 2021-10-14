@@ -28,9 +28,9 @@ Intro με το πρόβλημα το οποίο θέλω να επιλύσω μ
 
 ## 4. Page Scheduler Ανάλυση και Σχεδίαση
 * Μετρικές που πρέπει να λάβουμε υπόψιν για την υλοποίηση
-  * Per Page Benefit
-  * Read/Write operations per page (Non Uniform R/W latency)
-  * Συχνότητα των Migration Intervals 
+  * Per Page Benefit (Plot με το πόσα pages παίζουν ρολο στο performance)
+  * Read/Write operations per page (Non Uniform R/W latency) (plot με το πόσα writes και reads έχω per benchmark + estimated speedup αν εφαρμόσω άλλο policy για read και άλλο για write)
+  * Συχνότητα των Migration Intervals (Για History Page Scheduler πως επηρεάζεται το performance
 * Σύντομη περιγραφή Page Scheduler + (Διάγραμμα Page scheduler)
 * Τα Δομικά Στοιχεία του Page Scheduler
   * Ο Page-Selector
