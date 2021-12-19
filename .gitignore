@@ -1,3 +1,5 @@
 .gitignore
 temp.py
-__pycache__
+MemProfiling/__pycache__
+traces
+MemProfiling/plotters
