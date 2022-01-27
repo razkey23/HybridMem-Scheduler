@@ -1,4 +1,9 @@
 # Project Summary
+Part of Bachelor Thesis: ***Memory Management in Hybrid Memory Systems using LSTMs***
+
+Heavily Influenced by :
+1. “Learning memory access patterns", 2018.
+2. “Kleio: A hybrid memory page scheduler with machine intelligence", HPDC ’19.
 ## Introduction
 ### The problem
 Main purpose of this project is to obtain information about the estimated performance that could be achieved
