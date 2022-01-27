@@ -1,9 +1,6 @@
 '''
 INFO
-    First layer of our "simulation".
-
-        * Request class is used to model every Page Access as a request. It contains info about
-        Page , Operation and the epoch/scheduling interval which the request belongs to.
+    First layer of our "Profiling".
 
         * TrafficGen class is used to parse the raw input file and model the page accesses as a sequence
         of requests. TrafficGen only requires the input file and then we can get info about every single request that was made
@@ -22,17 +19,7 @@ import matplotlib.pyplot as plt
 import pandas
 import math
 import numpy as np
-
-
-class Request:
-    def __init__(self, id,op, page_id,page_address):
-        self.id = id
-        self.ep = 0
-        self.op = op
-        self.page_id = page_id
-        self.page_address = page_address
-        self.loc = -1
-        
+from request import *
 
 class TrafficGen():
     def __init__(self,trace_file):
@@ -44,9 +31,6 @@ class TrafficGen():
     
     def parse_trace(self):
         with open(self.trace_file,'r') as infile:
-            seq=[]
-            #page_map={}
-            #counter=0
             for line in infile.readlines():
                 row = line.split(" , ")
                 row[3] = row[3][0:14]
@@ -57,24 +41,27 @@ class TrafficGen():
                     op="r"
                 self.num_reqs+=1
                 paddr = int(row[3],0)
-                base_addr = paddr>>12
-                #base_addr = paddr - (paddr % 4096)
+                #base_addr = paddr>>12
+                base_addr = paddr - (paddr % 4096)
                 key = str(base_addr)
                 page_id = self.num_pages
                 if key not in self.page_map:
                     self.page_map[key] = self.num_pages #First Occurence of page
                     self.num_pages+=1
-                    #counter+=1
                 else :
                     page_id = self.page_map[key]
                 req = Request(self.num_reqs -1 ,op,page_id,key)
-                
-               
                 self.req_sequence.append(req)
     
     
-    # UTILITY PLOTTERS FOR TRAFFIC
     
+    
+    '''
+        The following plotters are not required for running the Simulator.
+        They were used for analysis and further understanding of the trace
+    '''
+    
+    # UTILITY PLOTTERS FOR TRAFFIC
     def plotter_page_locality(self):
         # Every page is sorted using and ID
         # X axis pageid locally - y axis #Occurencies

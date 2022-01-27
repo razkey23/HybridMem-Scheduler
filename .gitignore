@@ -3,4 +3,7 @@ temp.py
 MemProfiling/__pycache__
 traces
 MemProfiling/plotters
+Evaluation-Data/plotters/BoxPlotSingle.py
+Evaluation-Data/plotters/energy_temp_NORUN.py
+Evaluation-Data/plotters/Evaluation.py
 LatexEditLink.md

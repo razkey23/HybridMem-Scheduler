@@ -24,5 +24,4 @@ class Profile:
   
     def init(self):
         self.traffic.parse_trace()
-        #self.traffic.print_traffic_sum()
-        self.hmem.populate(self.traffic)
+        self.hmem.populate(self.traffic) 

@@ -12,10 +12,12 @@ INFO
         7. loc_ep is the location of the page in each epoch/interval e.g. [0,1,1,0] means that in the first interval the page
         was located in DRAM ,then moved to NVM for the second epoch and so on.
         8. pred_counts is the number of predicted accesses in a scheduling interval which comes from either the history-scheduler 
-        or LSTM
-
+        or hybrid scheduler 
+        9. writesPerPeriod,readsPerPeriod self explanatory (#writes for every single period, #reads for every single period)
+        10. misplacementsPeriods = list of periods this Page was misplaced
 USE CASE 
     Can't be used alone ,it's used inside the other classes
+    To obtain all these information classes further up in the abstraction layer - (profile,Page Selector, Scheduler) should be initiallized
 '''
 
 class Page:
@@ -23,9 +25,12 @@ class Page:
         self.id=id
         self.req_ids=[]
         self.pc_ids=[]
+        self.address=0
         self.reuse_dist=[]
         self.misplacements=0
         self.misplacementsPeriods=[]
+        self.writesPerPeriod=[]
+        self.readsPerPeriod=[]
         self.oracle_counts_ep=0
         self.oracle_counts_binned_ep = []
         self.pred_counts_binned_ep = []
@@ -34,3 +39,9 @@ class Page:
     
     def increase_cnt(self,ep):
         self.counts_ep[ep]+=1
+    
+    def writesPerEpoch(self,ep):
+        self.writesPerPeriod[ep]+=1
+
+    def readsPerEpoch(self,ep) :
+        self.readsPerPeriod[ep]+=1

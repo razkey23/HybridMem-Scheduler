@@ -22,6 +22,7 @@ class PageSelector:
         self.solution=''
         self.resdir_prefix=resdir_prefix
     
+    # RETURN Pages misplaced using current scheduler
     def get_misplaced_pages_sim(self):
         page_ids = []
         for page in self.prof.hmem.page_list :
@@ -29,6 +30,7 @@ class PageSelector:
                 page_ids.append(page.id)
         return page_ids
     
+    # RUN HISTORY SCHEDULER TO FIND MISPLACED PAGES
     def get_misplaced_pages(self):
         self.run_scheduler('history',[],0)
         page_ids = []
@@ -37,6 +39,7 @@ class PageSelector:
                 page_ids.append(page.id)
         return page_ids
     
+    '''
     def get_distinct_access_pattern(self,page_ids):
         distinct_page_cnts_seq = set()
         for page_id in page_ids:
@@ -45,16 +48,20 @@ class PageSelector:
                 distinct_page_cnts_seq.add(str(page.oracle_counts_binned_ep))
         return distinct_page_cnts_seq
     
+    
     def select_k_page_groups(self,ordered_page_ids,k):
         selected_page_ids =[]
         selected_patterns = set()
-        for page_id in order_page_ids:
+        for page_id in ordered_page_ids:
+
             if str(page.oracle_counts_binned_ep) not in selected_patterns and len(selected_patterns) < k:
                 selected_patterns.add(str(page.oracle_counts_binned_ep))
             if str(page.oracle_counts_binned_ep) in selected_patterns:
                 selected_page_ids.append(page_id)
         return selected_page_ids
+    '''
     
+    # ORDER PAGES BY PROFIT FACTOR
     def get_ordered_pages(self,page_ids):
         benefit_per_page=[]
         for id in page_ids :
@@ -65,8 +72,9 @@ class PageSelector:
         ordered_page_ids = [page_ids[i] for i in sorted_idxs]
         return ordered_page_ids
     
+    # RUN THE SCHEDULER 
     def run_scheduler(self,policy,selected_pages_for_oracle,num_rnns):
-        sim=PerfModel(self.prof,self.platform_name,policy,self.cap_ratio,self.num_reqs_per_ep)
+        sim=PerformanceModel(self.prof,self.platform_name,policy,self.cap_ratio,self.num_reqs_per_ep)
         sim.init()
         if policy == 'hybrid' or policy == 'hybrid-group':
             sim.init_hybrid(selected_pages_for_oracle)
