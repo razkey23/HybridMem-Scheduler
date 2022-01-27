@@ -1,5 +1,5 @@
 # Project Summary
-Part of Bachelor Thesis: ***Memory Management in Hybrid Memory Systems using LSTMs***
+Part of Bachelor Thesis: ***Memory Management in Hybrid Memory Systems using LSTMs***, *[Microlab NTUA](https://microlab.ntua.gr/) 2022*
 
 Heavily Influenced by :
 1. “Learning memory access patterns", 2018.
