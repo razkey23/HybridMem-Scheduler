@@ -4,6 +4,12 @@ Part of Diploma Thesis: *[**Memory Management in Hybrid DRAM/NVM Systems using L
 Heavily Influenced by :
 1. “Learning memory access patterns", 2018.
 2. “Kleio: A hybrid memory page scheduler with machine intelligence", HPDC ’19.
+
+`@article{stavrakakis2022memory,` \
+    `title={Memory management in hybrid DRAM/NVM systems using LSTMs},`\
+    `author={Stavrakakis, Konstantinos},`\
+    `year={2022}}`
+
 ## Introduction
 ### The problem
 Main purpose of this project is to obtain information about the estimated performance that could be achieved
