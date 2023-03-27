@@ -16,19 +16,7 @@ Heavily Influenced by :
    `    author =	{Katsaragakis, Manolis and Stavrakakis, Konstantinos and Masouros, Dimosthenis and Papadopoulos, Lazaros and Soudris, Dimitrios},` \
   `     title =	{{Adjacent LSTM-Based Page Scheduling for Hybrid DRAM/NVM Memory Systems}},` \
   `     booktitle =	{14th Workshop on Parallel Programming and Run-Time Management Techniques for Many-Core Architectures and 12th Workshop on Design Tools and Architectures for Multicore Embedded Computing Platforms (PARMA-DITAM 2023)},` \
-  `     pages =	{7:1--7:12},` \
-  `     series =	{Open Access Series in Informatics (OASIcs)},` \
-  `     ISBN =	{978-3-95977-269-3},` \
-  `     ISSN =	{2190-6807},` \
   `     year =	{2023},` \
-  `     volume =	{107},` \
-  `     editor =	{Bispo, Jo\~{a}o and Charles, Henri-Pierre and Cherubin, Stefano and Massari, Giuseppe},` \
-  `     publisher =	{Schloss Dagstuhl -- Leibniz-Zentrum f{\"u}r Informatik},`\
-  `     address =	{Dagstuhl, Germany},`\
-  `     URL =		{https://drops.dagstuhl.de/opus/volltexte/2023/17727},`\
-  `     URN =		{urn:nbn:de:0030-drops-177278},`\
-  `     doi =		{10.4230/OASIcs.PARMA-DITAM.2023.7},`\
-  `     annote =	{Keywords: Page Placement, Long Short-Term Memory, LSTM, Prediction, NVM, DRAM}
 }`
 
 ## Introduction
