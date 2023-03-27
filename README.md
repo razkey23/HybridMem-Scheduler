@@ -1,7 +1,7 @@
 # Project Summary
 Part of:
 1. Diploma Thesis: *[**Memory Management in Hybrid DRAM/NVM Systems using LSTMs**](https://drive.google.com/file/d/1Evxp9ywpH_QkVCbb-k2vRICJoBF6FoYX/view?usp=sharing)*, *Microlab NTUA 2022*
-2. [Adjacent LSTM-Based Page Scheduling for Hybrid DRAM/NVM Memory Systems](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Eilmn0AAAAJ&citation_for_view=_Eilmn0AAAAJ:d1gkVwhDpl0C), **PARMA-DITAM 2023**
+2. Workshop Publication : [Adjacent LSTM-Based Page Scheduling for Hybrid DRAM/NVM Memory Systems](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=_Eilmn0AAAAJ&citation_for_view=_Eilmn0AAAAJ:d1gkVwhDpl0C), *PARMA-DITAM 2023*
 
 Heavily Influenced by :
 1. “Learning memory access patterns", 2018.
